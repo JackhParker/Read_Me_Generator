@@ -15,7 +15,6 @@ function generateMarkdown(userResponses, userInfo) {
   * [Tests](#tests)` };
 
 
-  // Generate markdown for the top required portions of the README
   var draftMarkdown = 
   `# ${userResponses.title}
   ![Badge for GitHub repo top language](https://img.shields.io/github/languages/top/${userResponses.username}/${userResponses.repo}?style=flat&logo=appveyor) ![Badge for GitHub last commit](https://img.shields.io/github/last-commit/${userResponses.username}/${userResponses.repo}?style=flat&logo=appveyor)
@@ -86,10 +85,9 @@ function generateMarkdown(userResponses, userInfo) {
   `
   ---
   ## Questions?
-  
+
   For any questions, please contact me with the information below:
   GitHub: [@${userInfo.login}](${userInfo.url})
-
   `;
 
   if (userInfo.email !== null) {
@@ -100,7 +98,9 @@ function generateMarkdown(userResponses, userInfo) {
   `};
 
   draftMarkdown += draftDev;
+
   return draftMarkdown;
+  
 }
 
 module.exports = generateMarkdown;
