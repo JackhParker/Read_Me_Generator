@@ -90,15 +90,6 @@ function generateMarkdown(userResponses, userInfo) {
   GitHub: [@${userInfo.login}](${userInfo.url})
   `;
 
-  if (userInfo.email !== null) {
-  
-  draftDev +=
-  `
-  Email: ${userInfo.email}
-  `};
-
-  draftMarkdown += draftDev;
-
   return draftMarkdown;
   
 }
